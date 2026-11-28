@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\css\" />
+    <Folder Include="wwwroot\js\js\" />
+  </ItemGroup>
+
 </Project>

@@ -12,7 +12,7 @@ namespace GymSystem.Configurations
 
             builder.ToTable(T =>
             {
-                T.HasCheckConstraint("duration_Constraint", "Duration >= 1 and Duration <= 365");
+                T.HasCheckConstraint("duration_Constraint", "DurationInMonths  >= 1 and DurationInMonths  <= 365");
             });
         }
     }

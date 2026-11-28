@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GymSystem.Contexts.Migrations
+namespace GymSystem.Migrations
 {
     [DbContext(typeof(GymDBContext))]
     partial class GymDBContextModelSnapshot : ModelSnapshot
@@ -170,7 +170,7 @@ namespace GymSystem.Contexts.Migrations
 
                     b.ToTable("Plans", t =>
                         {
-                            t.HasCheckConstraint("duration_Constraint", "Duration >= 1 and Duration <= 365");
+                            t.HasCheckConstraint("duration_Constraint", "DurationInMonths  >= 1 and DurationInMonths  <= 365");
                         });
                 });
 

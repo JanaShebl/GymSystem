@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace GymSystem.Contexts.Migrations
+namespace GymSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class initialCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -53,7 +53,7 @@ namespace GymSystem.Contexts.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Plans", x => x.Id);
-                    table.CheckConstraint("duration_Constraint", "Duration >= 1 and Duration <= 365");
+                    table.CheckConstraint("duration_Constraint", "DurationInMonths  >= 1 and DurationInMonths  <= 365");
                 });
 
             migrationBuilder.CreateTable(
